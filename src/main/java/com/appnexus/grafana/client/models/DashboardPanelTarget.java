@@ -8,5 +8,8 @@ import lombok.experimental.Accessors;
 @Accessors(fluent = true)
 public class DashboardPanelTarget {
   String refId;
-  String target;
+  //String target;
+  String expr;
+  String legendFormat;
+  Integer intervalFactor;
 }

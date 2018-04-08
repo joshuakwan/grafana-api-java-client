@@ -17,4 +17,9 @@ public class DashboardTemplateList {
   List<DashboardTemplateListOption> options;
   String query;
   String type;
+
+  String datasource;
+
+  // TODO need to map integer to options
+  Integer refresh;
 }

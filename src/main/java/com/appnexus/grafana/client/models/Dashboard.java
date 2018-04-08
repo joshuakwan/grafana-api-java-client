@@ -10,10 +10,15 @@ import lombok.experimental.Accessors;
 public class Dashboard {
   Long id;
   String title;
-  List<DashboardRow> rows;
+  //List<DashboardRow> rows;
+  List<DashboardPanel> panels;
   Integer version;
   String timezone;
   List<String> tags;
   Integer schemaVersion;
   DashboardTemplate templating;
+
+  String refresh;
+
+  DashboardTime time;
 }

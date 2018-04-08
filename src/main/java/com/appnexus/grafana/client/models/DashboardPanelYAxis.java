@@ -18,6 +18,7 @@ public class DashboardPanelYAxis {
 
   public enum Format {
     NONE("none"),
+    BYTES("bytes"),
     SHORT("short");
     private final String value;
 
