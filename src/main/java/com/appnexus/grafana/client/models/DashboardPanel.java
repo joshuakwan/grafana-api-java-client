@@ -51,6 +51,11 @@ public class DashboardPanel {
 
     DashboardPanelTooltip tooltip;
 
+    // Repeated options;
+    String repeat;
+    String repeatDirection;
+    Integer minSpan;
+
     public enum Type {
         SINGLESTAT("singlestat"),
         GRAPH("graph");

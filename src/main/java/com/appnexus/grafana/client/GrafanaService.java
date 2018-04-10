@@ -36,9 +36,9 @@ public interface GrafanaService {
     Call<DashboardSuccessfulPost> postDashboard(
             @Header(AUTHORIZATION) String authorization, @Body GrafanaDashboard dashboard);
 
-    @DELETE(GRAFANA_DASHBOARDS + "{dashboard}")
+    @DELETE(GRAFANA_DASHBOARDS_UID + "{dashboardUid}")
     Call<DashboardSuccessfulDelete> deleteDashboard(
-            @Header(AUTHORIZATION) String authorization, @Path("dashboard") String dashboard);
+            @Header(AUTHORIZATION) String authorization, @Path("dashboardUid") String dashboardUid);
 
     //Notifications
     @GET(GRAFANA_NOTIFICATIONS + "{id}")
