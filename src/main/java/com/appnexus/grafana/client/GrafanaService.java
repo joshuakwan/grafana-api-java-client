@@ -24,10 +24,16 @@ public interface GrafanaService {
 
     String AUTHORIZATION = "Authorization";
 
+    // Organizations
+    @POST("api/orgs/")
+    Call<OrganizationSuccessfulPost> createOrganization(
+            @Body GrafanaOrganization organization);
+
+    @GET("api/orgs/name/{organizationName}")
+    Call<GrafanaOrganization> getOrganization(
+            @Path("organizationName") String organizationName);
+
     //Dashboards
-//  @GET(GRAFANA_DASHBOARDS + "{dashboard}")
-//  Call<GrafanaDashboard> getDashboard(
-//      @Header(AUTHORIZATION) String authorization, @Path("dashboard") String dashboard);
     @GET(GRAFANA_DASHBOARDS_UID + "{dashboardUid}")
     Call<GrafanaDashboard> getDashboard(
             @Header(AUTHORIZATION) String authorization, @Path("dashboardUid") String dashboardUid);

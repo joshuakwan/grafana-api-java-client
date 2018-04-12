@@ -14,6 +14,5 @@ import lombok.experimental.Accessors;
 @Accessors(fluent = true)
 public class GrafanaConfiguration {
   private String host;
-
   private String apiKey;
 }
